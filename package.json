@@ -1,0 +1,23 @@
+{
+  "name": "expen-tracker-backend",
+  "version": "1.0.0",
+  "description": "Expense tracker backend monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel dev"
+  },
+  "keywords": [
+    "expen-tracker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.2",
+    "@types/node": "^24.3.0",
+    "pnpm": "^10.15.0",
+    "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "overrides": {}
+  }
+}

@@ -1,0 +1,9 @@
+services:
+  expen-tracker-pg:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: expen-tracker
+    ports:
+      - "5432:5432"

@@ -1,0 +1,18 @@
+# Node.js 
+**/node_modules/
+
+# Ambientes
+**/.env
+**/.env.*
+
+# Docker
+**/.docker/
+
+# Build
+dist/
+build/
+
+# editor
+**/.vscode/ 
+
+/coverage
