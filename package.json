@@ -19,5 +19,8 @@
   },
   "pnpm": {
     "overrides": {}
+  },
+  "dependencies": {
+    "zod": "^4.1.3"
   }
 }
