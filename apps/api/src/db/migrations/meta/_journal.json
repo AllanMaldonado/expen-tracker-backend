@@ -5,15 +5,29 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1756237928898,
-      "tag": "0000_goofy_black_tom",
+      "when": 1756940304515,
+      "tag": "0000_pale_dark_beast",
       "breakpoints": true
     },
     {
       "idx": 1,
       "version": "7",
-      "when": 1756248610086,
-      "tag": "0001_oval_the_fury",
+      "when": 1757002429341,
+      "tag": "0001_fluffy_prodigy",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1757003080385,
+      "tag": "0002_strange_professor_monster",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1757005825137,
+      "tag": "0003_steep_thena",
       "breakpoints": true
     }
   ]

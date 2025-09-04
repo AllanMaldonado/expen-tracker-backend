@@ -1,6 +1,6 @@
 {
-  "id": "b6f2e1ce-5e16-4c80-b0a0-26d5890ed43c",
-  "prevId": "dd0345e6-570d-494e-b459-132491827d6b",
+  "id": "4aeb2fac-d3fd-4957-929c-bdc5194ef9dc",
+  "prevId": "b6f2e1ce-5e16-4c80-b0a0-26d5890ed43c",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -57,13 +57,13 @@
           "name": "last_name",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": false
         },
         "username": {
           "name": "username",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": false
         },
         "created_at": {
           "name": "created_at",
