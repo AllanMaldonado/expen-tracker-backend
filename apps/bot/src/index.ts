@@ -1,27 +1,41 @@
-import { Telegraf } from "telegraf";
-import { env } from "../../../config/env.ts";
+import { Scenes, session } from "telegraf";
+import { bot, setCommands } from "./bot.ts";
+import { addCategoryScene } from "./commands/addcat.ts";
+import { startScene } from "./commands/start.ts";
 
-// Exportar o handler para uso em outros módulos
-export const bot = new Telegraf(env.TELEGRAM_BOT_TOKEN);
+/* Setar Webhook novo (ngrok)
 
-bot.start((ctx) => {
-  ctx.reply(`
-👋 Bem-vindo, ${ctx.from?.first_name}! ao seu assistente de controle de gastos!
+  import { deleteWebhook, getWebhookInfo, setWebhook } from "./webhook.ts";
+  deleteWebhook()
+  setWebhook()
+  getWebhookInfo()
 
-🤖 Comandos:
- /addcat - Adicionar categoria
-  `.trim());
-});
+*/
 
-async function setCommands() {
-  await bot.telegram.setMyCommands([
-    { command: "start", description: "Inicia o bot" }, 
-    { command: "addcat", description: "Adicionar categoria" }, 
-  ]);
-}  
 
-export const processUpdate = async (update: any) => {
+const stage = new Scenes.Stage<Scenes.SceneContext>([startScene, addCategoryScene]);
+
+bot.use(session());
+
+bot.use(stage.middleware());
+
+await setCommands();
+
+bot.launch(); 
+
+
+/* Iniciar Bot com Webhook:
+
+  export const processUpdate = async (update: any) => {
     await bot.handleUpdate(update);
-    setCommands();
-};
+  };
+  const initializeBot = async () => {
+    // Configura session e stage
+    bot.use(session());
+    bot.use(stage.middleware());
+
+    await setCommands();
+  };
+  initializeBot().catch(console.error);
+*/
 
